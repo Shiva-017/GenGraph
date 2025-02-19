@@ -3,6 +3,9 @@
 ## **Overview**
 Gen Graph Visualizer is a simple **Named Entity Recognition (NER) and Relationship Extraction** tool that converts input text into an interactive **graph visualization**. It extracts entities and their relationships using **Perplexity AI's API** and displays them as a network graph.
 
+![Prompt](images/prompt.png)
+![Graph Visualization](images/graph.png)
+
 ## **Features**
 - Extracts **entities** and **relationships** from text using **NER techniques**.
 - Generates a **graph visualization** with labeled nodes and edges.
