@@ -36,7 +36,7 @@ Gen Graph Visualizer is a simple **Named Entity Recognition (NER) and Relationsh
 git clone https://github.com/Shiva-017/GenGraph.git
 cd GenGraph
 ```
-### **2. Add .env file with the perplexity API key
+### 2. Add .env file with the perplexity API key
 
 ### **3. Install Dependencies**
 ```sh
