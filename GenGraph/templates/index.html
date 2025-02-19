@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenGraph Visualizer</title>
+    <script>
+        async function extractEntities() {
+            const text = document.getElementById("text").value;
+            if (!text) return alert("Please enter text!");
+            
+            const response = await fetch("/extract", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text })
+            });
+
+            const result = await response.json();
+            if (result.graph) {
+                document.getElementById("graph").src = "data:image/png;base64," + result.graph;
+            } else {
+                alert("Error: " + (result.error || "Unknown issue"));
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>GenGraph Visualizer</h2>
+    <textarea id="text" rows="4" cols="50"></textarea>
+    <br>
+    <button onclick="extractEntities()">Generate Graph</button>
+    <br><br>
+    <img id="graph" alt="Graph will appear here">
+</body>
+</html>
