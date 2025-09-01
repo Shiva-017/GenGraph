@@ -8,7 +8,7 @@ load_dotenv()
 class NERExtractor:
     def __init__(self):
         self.api_url = "https://api.perplexity.ai/chat/completions"
-        self.api_key = os.environ['KEY']
+        self.api_key = os.environ.get('KEY', '')
         
     def extract_entities_and_relationships(self, text):
         prompt = (
