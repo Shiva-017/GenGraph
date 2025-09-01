@@ -10,7 +10,7 @@ class NERExtractor:
         self.api_url = "https://api.perplexity.ai/chat/completions"
         self.api_key = os.environ.get('KEY', '')
         
-    def extract_entities_and_relationships(self, text):
+    def extract_entities_and_relationships(self, text: str) -> dict:
         prompt = (
             f"Extract entities and relationships from the given text and format the response "
             f"as a valid JSON object containing 'entities' (list of names) and 'relationships' "
