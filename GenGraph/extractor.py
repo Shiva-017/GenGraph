@@ -25,7 +25,7 @@ class NERExtractor:
                 {"role": "system", "content": "You are an NLP model that extracts entities and relationships from text. Respond only with a JSON object."},
                 {"role": "user", "content": prompt},
             ],
-            "max_tokens": 500,
+            "max_tokens": 600,
             "temperature": 0.7,
         }
 
