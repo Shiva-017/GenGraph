@@ -26,7 +26,7 @@ class NERExtractor:
                 {"role": "user", "content": prompt},
             ],
             "max_tokens": 600,
-            "temperature": 0.7,
+            "temperature": 0.5,
         }
 
         headers = {
