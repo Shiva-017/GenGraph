@@ -22,7 +22,7 @@ class NERExtractor:
         payload = {
             "model": "llama-3.1-sonar-large-128k-online",
             "messages": [
-                {"role": "system", "content": "You are an NLP model that extracts entities and relationships from text. Respond only with a JSON object."},
+                {"role": "system", "content": "You are an NLP assistant that extracts named entities and relationships from text. Always respond with a valid JSON object only."},
                 {"role": "user", "content": prompt},
             ],
             "max_tokens": 600,
