@@ -34,7 +34,7 @@ class NERExtractor:
             "Content-Type": "application/json",
         }
 
-        response = requests.post(self.api_url, headers=headers, json=payload)
+        response = requests.post(self.api_url, headers=headers, json=payload, timeout=30)
         
         if response.status_code == 200:
             result = response.json()
