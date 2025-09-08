@@ -41,6 +41,7 @@ class NERExtractor:
             try:
                 content = result["choices"][0]["message"]["content"].strip()
                 
+                # strip markdown code fences if model wraps response
                 content = content.split("```json")[-1].split("```")[0].strip()
                 parsed_data = json.loads(content)
                 return parsed_data
