@@ -48,7 +48,7 @@ class NERExtractor:
             except (KeyError, json.JSONDecodeError) as e:
                 return {"error": "unexpected response format", "exception": str(e)}
         else:
-            return {"error": "Failed to fetch data", "status_code": response.status_code, "details": response.text}
+            return {"error": "api request failed", "status_code": response.status_code}
 
 if __name__ == "__main__":
     text = "Naruto Uzumaki is the son of Minato Namikaze. Sasuke Uchiha is Naruto's rival."
