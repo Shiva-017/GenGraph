@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class NERExtractor:
+    """Extracts named entities and relationships using a remote LLM API."""
+
     def __init__(self):
         self.api_url = "https://api.perplexity.ai/chat/completions"
         self.api_key = os.environ.get('KEY', '')
