@@ -46,7 +46,7 @@ class NERExtractor:
                 parsed_data = json.loads(content)
                 return parsed_data
             except (KeyError, json.JSONDecodeError) as e:
-                return {"error": "Unexpected response format", "raw": result, "exception": str(e)}
+                return {"error": "unexpected response format", "exception": str(e)}
         else:
             return {"error": "Failed to fetch data", "status_code": response.status_code, "details": response.text}
 
