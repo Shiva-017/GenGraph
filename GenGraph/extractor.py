@@ -54,4 +54,4 @@ if __name__ == "__main__":
     text = "Naruto Uzumaki is the son of Minato Namikaze. Sasuke Uchiha is Naruto's rival."
     ner = NERExtractor()
     results = ner.extract_entities_and_relationships(text)
-    print(json.dumps(results, indent=4))
+    print(json.dumps(results, indent=2))
