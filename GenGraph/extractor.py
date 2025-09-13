@@ -10,6 +10,7 @@ class NERExtractor:
 
     def __init__(self):
         self.api_url = "https://api.perplexity.ai/chat/completions"
+        self.model = "llama-3.1-sonar-large-128k-online"
         self.api_key = os.environ.get('KEY', '')
         
     def extract_entities_and_relationships(self, text: str) -> dict:
