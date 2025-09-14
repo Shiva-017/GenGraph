@@ -1,9 +1,11 @@
-from flask import Flask, request, jsonify, render_template
-from extractor import NERExtractor  
-import networkx as nx
-import matplotlib.pyplot as plt
 import io
 import base64
+import logging
+
+from flask import Flask, request, jsonify, render_template
+from extractor import NERExtractor
+import networkx as nx
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 ner = NERExtractor()
