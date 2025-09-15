@@ -24,7 +24,7 @@ def generate_graph_image(entities: list, relationships: list) -> str:
     for rel in relationships:
         G.add_edge(rel['source'], rel['target'], label=rel['relationship'])
     
-    fig, ax = plt.subplots(figsize=(8, 6))  
+    fig, ax = plt.subplots(figsize=(10, 7))
     pos = nx.spring_layout(G, k=6.0, seed=42) 
 
     
