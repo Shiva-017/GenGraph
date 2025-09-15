@@ -14,7 +14,8 @@ ner = NERExtractor()
 
 
 
-def generate_graph_image(entities, relationships):
+def generate_graph_image(entities: list, relationships: list) -> str:
+    """Render a directed graph and return it as a base64-encoded PNG."""
     G = nx.DiGraph()
     
     for entity in entities:
