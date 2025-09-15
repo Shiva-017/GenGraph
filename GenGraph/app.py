@@ -25,7 +25,7 @@ def generate_graph_image(entities: list, relationships: list) -> str:
         G.add_edge(rel['source'], rel['target'], label=rel['relationship'])
     
     fig, ax = plt.subplots(figsize=(10, 7))
-    pos = nx.spring_layout(G, k=6.0, seed=42) 
+    pos = nx.spring_layout(G, k=5.0, seed=42)
 
     
     nx.draw_networkx_nodes(G, pos, node_color="skyblue", node_size=1000, edgecolors="black", alpha=0.6, ax=ax)
