@@ -8,6 +8,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 app = Flask(__name__)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 ner = NERExtractor()
 
 
