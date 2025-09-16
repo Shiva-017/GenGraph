@@ -28,7 +28,7 @@ def generate_graph_image(entities: list, relationships: list) -> str:
     pos = nx.spring_layout(G, k=5.0, seed=42)
 
     
-    nx.draw_networkx_nodes(G, pos, node_color="skyblue", node_size=1000, edgecolors="black", alpha=0.6, ax=ax)
+    nx.draw_networkx_nodes(G, pos, node_color="#64B5F6", node_size=1200, edgecolors="black", alpha=0.75, ax=ax)
 
     
     nx.draw_networkx_edges(G, pos, edge_color="gray", width=1.5, connectionstyle="arc3,rad=0.3", arrows=True, ax=ax)
