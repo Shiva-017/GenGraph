@@ -31,7 +31,7 @@ def generate_graph_image(entities: list, relationships: list) -> str:
     nx.draw_networkx_nodes(G, pos, node_color="#64B5F6", node_size=1200, edgecolors="black", alpha=0.75, ax=ax)
 
     
-    nx.draw_networkx_edges(G, pos, edge_color="gray", width=1.5, connectionstyle="arc3,rad=0.3", arrows=True, ax=ax)
+    nx.draw_networkx_edges(G, pos, edge_color="#757575", width=2.0, connectionstyle="arc3,rad=0.2", arrows=True, ax=ax)
     
    
     nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold", ax=ax)
