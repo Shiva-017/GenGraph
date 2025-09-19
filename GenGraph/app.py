@@ -34,7 +34,7 @@ def generate_graph_image(entities: list, relationships: list) -> str:
     nx.draw_networkx_edges(G, pos, edge_color="#757575", width=2.0, connectionstyle="arc3,rad=0.2", arrows=True, ax=ax)
     
    
-    nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold", ax=ax)
+    nx.draw_networkx_labels(G, pos, font_size=10, font_weight="bold", ax=ax)
 
     
     edge_labels = {(u, v): d["label"] for u, v, d in G.edges(data=True)}
