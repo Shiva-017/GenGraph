@@ -63,7 +63,7 @@ def index():
 @app.route('/extract', methods=['POST'])
 def extract():
     data = request.json
-    text = data.get('text', '')
+    text = (data.get('text') or '').strip()
     if not text:
         return jsonify({'error': 'No text provided'}), 400
     
