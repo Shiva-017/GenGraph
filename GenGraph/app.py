@@ -38,8 +38,8 @@ def generate_graph_image(entities: list, relationships: list) -> str:
 
     
     edge_labels = {(u, v): d["label"] for u, v, d in G.edges(data=True)}
-    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=9, rotate=True, label_pos=0.3,
-                                 bbox=dict(facecolor="white", edgecolor="none", alpha=0.5), ax=ax)
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=8, rotate=False, label_pos=0.4,
+                                 bbox=dict(facecolor="white", edgecolor="none", alpha=0.7), ax=ax)
 
     ax.set_xticks([]) 
     ax.set_yticks([]) 
