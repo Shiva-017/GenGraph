@@ -48,7 +48,7 @@ def generate_graph_image(entities: list, relationships: list) -> str:
 
     
     buf = io.BytesIO()
-    plt.savefig(buf, format='png', bbox_inches='tight', pad_inches=0.2)  
+    plt.savefig(buf, format='png', bbox_inches='tight', pad_inches=0.3)
     buf.seek(0)
     encoded_image = base64.b64encode(buf.getvalue()).decode('utf-8')
     plt.close()
