@@ -44,7 +44,7 @@ def generate_graph_image(entities: list, relationships: list) -> str:
     ax.set_xticks([]) 
     ax.set_yticks([]) 
     ax.set_frame_on(False) 
-    plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)  
+    plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
 
     
     buf = io.BytesIO()
