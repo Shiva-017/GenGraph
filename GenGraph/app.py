@@ -69,6 +69,7 @@ def extract():
     
     result = ner.extract_entities_and_relationships(text)
     if 'error' in result:
+        logger.error("extraction failed: %s", result.get('error'))
         return jsonify(result), 500
     
     graph_image = generate_graph_image(result['entities'], result['relationships'])
