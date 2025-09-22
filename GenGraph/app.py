@@ -74,6 +74,8 @@ def extract():
     
     graph_image = generate_graph_image(result['entities'], result['relationships'])
     
+    logger.info("graph generated: %d entities, %d relationships",
+                len(result['entities']), len(result['relationships']))
     return jsonify({'graph': graph_image})
 
 if __name__ == '__main__':
